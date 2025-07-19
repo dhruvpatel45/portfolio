@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruv Patel - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f7f9fc;
+      --text-light: #333;
+      --bg-dark: #1e1e1e;
+      --text-dark: #f1f1f1;
+      --accent: #1e88e5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid white;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .dark-mode h2 {
+      color: #e0e0e0;
+    }
+
+    .project {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      transition: background 0.3s;
+    }
+
+    .dark-mode .project {
+      background: #2e2e2e;
+    }
+
+    .project h3 {
+      color: #1e88e5;
+      margin-bottom: 0.5rem;
+    }
+
+    .project p {
+      margin-bottom: 0.6rem;
+    }
+
+    .badge {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .dark-mode .badge {
+      background: #2e2e2e;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      header p {
+        font-size: 0.9rem;
+      }
+      .toggle-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()"> Theme Change</button>
+  <header>
+    <img src="Dhruv_Patel.jpg" alt="Dhruv Patel">
+    <h1>Dhruv Patel</h1>
+    <p>IT Solution Architect (Fresher) | Full-Stack Developer </p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am a passionate final-year M.Sc. IT student aiming to bridge the gap between business needs and technical solutions. With a strong foundation in software development, cloud platforms, and client communication, I'm eager to contribute as an IT Solution Architect.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Languages: Python, Java, Dart, PHP, C</li>
+      <li>Frameworks: Flutter, Django</li>
+      <li>Databases: MySQL, Firebase, SQLite</li>
+      <li>Cloud: Google Cloud Skill Boost, Firebase</li>
+      <li>Tools: Git, VS Code, Jira, Postman</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <!-- Repeat structure for each project -->
+    <div class="project">
+      <h3>Cloth O’Clock</h3>
+      <p><strong>Tech Stack:</strong> Flutter, Django, PHP, MySQL</p>
+      <p><strong>Role:</strong> Team Lead | Modular Development | System Architecture | Full Stack Developer</p>
+      <p><strong>Description:</strong> Led a 4-member Agile team to build a full-stack cross-platform mobile app for renting/reselling clothes. Architected the backend and frontend, developed scalable modules, and researched sustainable fashion features. Built reusable Flutter components and APIs for eco-conscious fashion sharing.</p>
+    </div>
+    <div class="project">
+      <h3>Book My Ride</h3>
+      <p><strong>Tech Stack:</strong> Django, MySQL, HTML/CSS/JS</p>
+      <p><strong>Role:</strong> Full Stack Developer | Modular Codebase | Database Design</p>
+      <p><strong>Description:</strong> Developed a ride booking platform with authentication, trip management, and ride history. Ensured responsive design, secure login, and smooth UX.</p>
+    </div>
+    <div class="project">
+      <h3>Diabetes Prediction</h3>
+      <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, SMOTE</p>
+      <p><strong>Role:</strong> ML Developer | Data Preprocessing | Model Evaluation</p>
+      <p><strong>Description:</strong> Built a model using Random Forest & AdaBoost with 86% accuracy. Addressed data imbalance with SMOTE and applied ensemble techniques for medical diagnosis.</p>
+    </div>
+    <div class="project">
+      <h3>Aircraft Detection System (Ongoing)</h3>
+      <p><strong>Tech Stack:</strong> Flutter, PHP, OpenSky API, MySQL</p>
+      <p><strong>Role:</strong> System Designer | Backend & Frontend Developer</p>
+      <p><strong>Description:</strong> Building a live aircraft tracker using OpenSky API to show flights within 50km on a map. Backend processes ADS-B data and stores analytics in MySQL.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certifications & Badges</h2>
+    <div class="badge">
+      <p>✔ Google Cloud Skill Boost (10+ badges)</p>
+      <p>✔ <a href="https://www.cloudskillsboost.google/public_profiles/e9322287-7955-4ba3-96b1-1818fcd98da5" target="_blank">Google Cloud Skill Boost (View My Badges)</a></p>
+      <p>✔ Gemini Pro Vision Badge</p>
+      <p>✔ Firebase Studio Developer Preview Participant</p>
+      <p>✔ Attendee of Google I/O and AWS Innovate</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resume</h2>
+    <p>📄 <a href="Dhruv_Patel.pdf" download>Download My Resume (PDF)</a></p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:dhruvkpatel868@gmail.com">dhruvkpatel868@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/dhruvpatel45" target="_blank">github.com/dhruvpatel45</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/dhruv-patel-155314255/" target="_blank">linkedin.com/in/dhruv-patel</a></p>
+    <p>Google Developer: <a href="https://developers.google.com/profile/u/100333029840086310331" target="_blank">View Profile</a></p>
+  </section>
+
+  <footer>
+    © 2025 Dhruv Patel | Built with HTML & CSS | Hosted on GitHub Pages
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
